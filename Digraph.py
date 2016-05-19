@@ -82,9 +82,9 @@ class DiGraph(Queue):
         to_str_neighbours=""
 
         for i in range(1,level+1):
-            if i<=len(tree_of_root)-2:
+            if i<=len(tree_of_root)-1:
                 to_str_neighbours+= str(i) + ". level " + term + "-neighbour(s) of vertex " + vertex + " is/are " + str([ x for x in tree_of_root[i] ]) + "\n"
-            elif i>len(tree_of_root)-2:           #if entering the level is greater than the height of tree, then getting out of loop
+            elif i>len(tree_of_root)-1:           #if entering the level is greater than the height of tree, then getting out of loop
                 to_str_neighbours+= "The vertex " + vertex + " hasn't got any neighbour in " + str(i) + ". level\n"
 
         return to_str_neighbours
