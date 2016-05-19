@@ -1,3 +1,3 @@
 # Digraph
 
-Created by Forever Freshcoders
+Created by Forever Freshcoders ©
