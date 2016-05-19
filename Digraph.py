@@ -46,3 +46,53 @@ class DiGraph(Queue):
             dot_file.writelines(j + "\n")     #single vertices write to end
         dot_file.write("}")
         dot_file.close()
+
+    def __bfs(self,root,term):		#private method that only execute in Digraph not in main function
+        Q=Queue()
+        Q.enqueue(root)			#enqueue the rooted vertex by application of BFS algorithm
+        visited=[]
+        tree=[[root]]           #appending all visited nodes according to its level
+        counter=0
+
+        while (Q.is_empty() is False):
+            node=Q.dequeue()
+            visited.append(node)
+
+            for edge in self.edges:
+                if (edge[term]==node) and (edge[1-term] not in visited) and (edge[1-term] not in Q._items):		#if the node already searching, then not go in that statement
+                    Q.enqueue(edge[1-term])
+
+            if (len(visited)==1):		#the vertex which contain in level 1
+                counter+=Q.size()
+                tree.append([x for x in Q._items])
+
+            elif (len(visited) - counter == 1):			#the other level of vertices checking
+                tree.append([x for x in Q._items])
+                counter+=Q.size()
+
+        return visited,tree[:-1]		#get rid of extra list at the end of the 2D tree list
+
+    def neighbours_of(self,vertex,level=1,term="out"):         #default level of neighbourhood is 1 it means that default parameter is nearest neighbours also default term of neighbourhood is out-neighbourhood
+        if (term=="in"):           #if term is in-neighbours
+            k=1           #according to algorithm, if in-neighbour then it'll look at 1. index of edges
+        else:          #if term is out-neighbours
+            k=0              #according to algorithm, if out-neighbour then it'll look at 0. index of edges
+
+        traversing_vertices,tree_of_root=self.__bfs(vertex,k)        #bfs algorithm helps us to find the neighbours both 'out' and 'in'
+        to_str_neighbours=""
+
+        for i in range(1,level+1):
+            if i<=len(tree_of_root)-2:
+                to_str_neighbours+= str(i) + ". level " + term + "-neighbour(s) of vertex " + vertex + " is/are " + str([ x for x in tree_of_root[i] ]) + "\n"
+            elif i>len(tree_of_root)-2:           #if entering the level is greater than the height of tree, then getting out of loop
+                to_str_neighbours+= "The vertex " + vertex + " hasn't got any neighbour in " + str(i) + ". level\n"
+
+        return to_str_neighbours
+
+    def connectivity(self,vertex):          #any vertex can be given as parameter.
+        return len(self.vertices)==len(self.__bfs(vertex,"out"))
+
+    def shortest_path(self,vertex1,vertex2):
+        pass
+
+
