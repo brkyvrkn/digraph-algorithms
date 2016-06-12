@@ -1,4 +1,5 @@
 #Forever Freshcoders
+
 class DiGraph():
 
     def __init__(self, vertices, edges):
@@ -44,8 +45,23 @@ class DiGraph():
                         path.append((active_node,searching_edge[1]))
                         return self.find_shortest_path(start_vertex, active_node, path)       #recursively call
 
-    def neighbours_of(self,vertex,level):
-        pass
+    def neighbours_of(self,root,level=1):
+        tree={}             #stored in neighbours in terms of distance to root vertex
+        tree[0]=[root]            #0. level is the root itself
+        visited=[root,]
+        level_counter=1         #each distance counting with
+        while (level_counter <= level):
+            tree[level_counter]=[]          #multiple values stored in specifying keys
+            for node in tree[level_counter-1]:          #active node
+                for edge in self.edges:
+                    if (edge[0]==node) and (edge[1] not in visited):
+                        tree[level_counter]+=[edge[1]]            #children adding to tree as multiple value by list
+                        visited.append(edge[1])
+            if (tree[level_counter]==[]):           #Before arrived specifying level, to prevent extra memory break out the method if it has no other neighbour
+                del tree[level_counter]         #deleting empty list to save the memory
+                return tree                #break out and return level tree
+            level_counter+=1
+        return tree
 
     def is_connected(self):
         return len(self.isolated_nodes())==0
