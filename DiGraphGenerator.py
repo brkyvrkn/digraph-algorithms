@@ -1,4 +1,5 @@
 from DiGraph import *
+import time
 
 def text_to_dict(filename):
     in_file=open(filename,"r")
@@ -24,11 +25,11 @@ def specify_edges(filename):
             edges.append((node,i))          # concat as tuple similar like G=(V,E)
     return edges
 
-vertices=specify_vertices("graph.txt")
-edges=specify_edges("graph.txt")
-graphviz=DiGraph(vertices, edges)
-print "Vertices of digraph are\n" , graphviz.get_vertices()
-print "Edges of digraph are\n" , graphviz.get_edges()
-print "Isolated Nodes of digraph are\n" , graphviz.isolated_nodes()
-graphviz.toDotFormat("Digraph.dot")
-print graphviz.neighbours_of('b',5,"out")
+vertices=specify_vertices("graph2.txt")
+edges=specify_edges("graph2.txt")
+directed_graph=DiGraph(vertices, edges)
+
+start1=time.clock()
+print directed_graph.find_shortest_path("muntins","fishify")
+print "Elapsed Time is " + str((time.clock() - start1)) + " second"
+print directed_graph.neighbours_of("muntins",15)
