@@ -57,9 +57,6 @@ class DiGraph():
                     if (edge[0]==node) and (edge[1] not in visited):
                         tree[level_counter]+=[edge[1]]            #children adding to tree as multiple value by list
                         visited.append(edge[1])
-            if (tree[level_counter]==[]):           #Before arrived specifying level, to prevent extra memory break out the method if it has no other neighbour
-                del tree[level_counter]         #deleting empty list to save the memory
-                return tree                #break out and return level tree
             level_counter+=1
         return tree
 
