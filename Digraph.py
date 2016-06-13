@@ -35,7 +35,7 @@ class DiGraph():
             return path[::-1]
         Queue=[start_vertex]            #breath first queue
         visited=[]          #visiting nodes stored in
-        while (len(Queue)>0):
+        while (Queue):
             active_node=Queue.pop(0)        #according to BFS algorithm, we must have active node
             visited.append(active_node)
             for searching_edge in self.edges:
