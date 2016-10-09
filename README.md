@@ -1,3 +1,3 @@
 # Digraph
 
-Created by Forever Freshcoders ©
+Algorithms about Graphs without Library ©
