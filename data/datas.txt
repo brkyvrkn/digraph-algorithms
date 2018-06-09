@@ -1,0 +1,119 @@
+For 500vertices:
+dubbers to peptone is ['dubbers', 'neuters', 'peptone'] ====> Elapsed time is 4.83366562025e-05second with library
+dubbers to peptone is [('dubbers', 'boreens'), ('boreens', 'peptone')] ====> Elapsed time is 0.0250930149559second with class
+caddice to cyanate is ['caddice', 'angelic', 'cyanate'] ====> Elapsed time is 3.77423205965e-05second with library
+caddice to cyanate is [('caddice', 'astelic'), ('astelic', 'cyanate')] ====> Elapsed time is 0.00832284383751second with class
+hokonui to ruction is ['hokonui', 'ruction'] ====> Elapsed time is 2.51615470643e-05second with library
+hokonui to ruction is [('hokonui', 'ruction')] ====> Elapsed time is 0.00136964895007second with class
+sideral to hocuses is ['sideral', 'salutes', 'hocuses'] ====> Elapsed time is 6.55524515624e-05second with library
+sideral to hocuses is [('sideral', 'becurls'), ('becurls', 'hocuses')] ====> Elapsed time is 0.0456970112717second with class
+sheepos to madwort is ['sheepos', 'powters', 'madwort'] ====> Elapsed time is 4.73434372396e-05second with library
+sheepos to madwort is [('sheepos', 'drowses'), ('drowses', 'madwort')] ====> Elapsed time is 0.0612657185178second with class
+
+For 1000vertices:
+gorgons to informs is ['gorgons', 'informs'] ====> Elapsed time is 4.17151964482e-05second with library
+gorgons to informs is [('gorgons', 'informs')] ====> Elapsed time is 0.00442578369942second with class
+maelids to erasure is ['maelids', 'stamper', 'erasure'] ====> Elapsed time is 0.00011322696179second with library
+maelids to erasure is [('maelids', 'dustier'), ('dustier', 'erasure')] ====> Elapsed time is 0.0212141638321second with class
+planked to gummous is ['planked', 'damsels', 'muskegs', 'gummous'] ====> Elapsed time is 0.000107267648011second with library
+planked to gummous is [('planked', 'plucker'), ('plucker', 'scourge'), ('scourge', 'gummous')] ====> Elapsed time is 1.21397247194second with class
+althaea to jazzers is ['althaea', 'petaras', 'jazzers'] ====> Elapsed time is 5.52891889445e-05second with library
+althaea to jazzers is [('althaea', 'stapler'), ('stapler', 'jazzers')] ====> Elapsed time is 0.0420207768164second with class
+patness to flacons is ['patness', 'paeonic', 'flacons'] ====> Elapsed time is 8.40925388728e-05second with library
+patness to flacons is [('patness', 'parcels'), ('parcels', 'flacons')] ====> Elapsed time is 0.0152002230108second with class
+
+For 1500vertices:
+folkmot to chromas is ['folkmot', 'smooths', 'chromas'] ====> Elapsed time is 0.000102301553197second with library
+folkmot to chromas is [('folkmot', 'smooths'), ('smooths', 'chromas')] ====> Elapsed time is 0.107078936408second with class
+plating to outtold is ['plating', 'lotions', 'outtold'] ====> Elapsed time is 9.33625825272e-05second with library
+plating to outtold is [('plating', 'lotions'), ('lotions', 'outtold')] ====> Elapsed time is 0.803355557159second with class
+remodel to outtold is ['remodel', 'clotter', 'outtold'] ====> Elapsed time is 9.27004365536e-05second with library
+remodel to outtold is [('remodel', 'outedge'), ('outedge', 'outtold')] ====> Elapsed time is 0.274143994237second with class
+legongs to mutines is ['legongs', 'consult', 'mutines'] ====> Elapsed time is 9.0382925638e-05second with library
+legongs to mutines is [('legongs', 'skeeing'), ('skeeing', 'mutines')] ====> Elapsed time is 0.0492855113853second with class
+nursery to redcaps is ['nursery', 'downers', 'redcaps'] ====> Elapsed time is 8.83964877136e-05second with library
+nursery to redcaps is [('nursery', 'remoras'), ('remoras', 'redcaps')] ====> Elapsed time is 0.102360484188second with class
+
+For 2000vertices:
+relaxin to bonings is ['relaxin', 'rancing', 'bonings'] ====> Elapsed time is 0.000244994010888second with library
+relaxin to bonings is [('relaxin', 'ironise'), ('ironise', 'bonings')] ====> Elapsed time is 0.471032768942second with class
+abridge to futures is ['abridge', 'hastier', 'futures'] ====> Elapsed time is 0.000174475464512second with library
+abridge to futures is [('abridge', 'hastier'), ('hastier', 'futures')] ====> Elapsed time is 1.14570687725second with class
+airings to cometic is ['airings', 'interim', 'cometic'] ====> Elapsed time is 0.000130111684161second with library
+airings to cometic is [('airings', 'caniest'), ('caniest', 'cometic')] ====> Elapsed time is 1.52967771369second with class
+blawort to pilcher is ['blawort', 'maltier', 'pilcher'] ====> Elapsed time is 8.27682469229e-05second with library
+blawort to pilcher is [('blawort', 'railbed'), ('railbed', 'pilcher')] ====> Elapsed time is 0.586316687204second with class
+chibols to rewinds is ['chibols', 'miscode', 'rewinds'] ====> Elapsed time is 9.43558014939e-05second with library
+chibols to rewinds is [('chibols', 'shilled'), ('shilled', 'rewinds')] ====> Elapsed time is 0.0585082116033second with class
+
+For 2500vertices:
+midmost to lysines is ['midmost', 'posties', 'lysines'] ====> Elapsed time is 9.46868744762e-05second with library
+midmost to lysines is [('midmost', 'emetins'), ('emetins', 'lysines')] ====> Elapsed time is 0.090196200474second with class
+zingaro to swathed is ['zingaro', 'santero', 'swathed'] ====> Elapsed time is 0.000124814516361second with library
+zingaro to swathed is [('zingaro', 'easting'), ('easting', 'swathed')] ====> Elapsed time is 2.70434751805second with class
+pigtail to burbles is ['pigtail', 'stabile', 'burbles'] ====> Elapsed time is 0.000157590742141second with library
+pigtail to burbles is [('pigtail', 'lairise'), ('lairise', 'burbles')] ====> Elapsed time is 3.10107393456second with class
+nutwood to pinched is ['nutwood', 'buncoed', 'pinched'] ====> Elapsed time is 0.000123821297393second with library
+nutwood to pinched is [('nutwood', 'pouncet'), ('pouncet', 'pinched')] ====> Elapsed time is 1.52445404409second with class
+andvile to bagnios is ['andvile', 'ikebana', 'bagnios'] ====> Elapsed time is 0.000202616668467second with library
+andvile to bagnios is [('andvile', 'yodling'), ('yodling', 'bagnios')] ====> Elapsed time is 0.893557054801second with class
+
+For 3000vertices:
+lensmen to garnish is ['lensmen', 'gyrenes', 'garnish'] ====> Elapsed time is 0.000205927398341second with library
+lensmen to garnish is [('lensmen', 'manwise'), ('manwise', 'garnish')] ====> Elapsed time is 1.20289377656second with class
+bogyman to pickers is ['bogyman', 'decagon', 'scooped', 'pickers'] ====> Elapsed time is 0.000518791371704second with library
+bogyman to pickers is [('bogyman', 'bausond'), ('bausond', 'debarks'), ('debarks', 'pickers')] ====> Elapsed time is 28.4449488525second with class
+gollans to mooktar is ['gollans', 'litoral', 'mooktar'] ====> Elapsed time is 0.000322465090008second with library
+gollans to mooktar is [('gollans', 'megaron'), ('megaron', 'mooktar')] ====> Elapsed time is 0.63594353484second with class
+lording to poitrel is ['lording', 'poitrel'] ====> Elapsed time is 9.27004365536e-05second with library
+lording to poitrel is [('lording', 'poitrel')] ====> Elapsed time is 0.00629767037181second with class
+realtor to carpale is ['realtor', 'carpale'] ====> Elapsed time is 6.12485027176e-05second with library
+realtor to carpale is [('realtor', 'carpale')] ====> Elapsed time is 0.073442251932second with class
+
+For 3500vertices:
+broaden to pirogen is ['broaden', 'pirogen'] ====> Elapsed time is 0.000227116069567second with library
+broaden to pirogen is [('broaden', 'pirogen')] ====> Elapsed time is 0.0394370832205second with class
+cagmags to poetise is ['cagmags', 'impacts', 'poetise'] ====> Elapsed time is 0.000214204223028second with library
+cagmags to poetise is [('cagmags', 'atomics'), ('atomics', 'poetise')] ====> Elapsed time is 3.38504417507second with class
+aneared to bewared is ['aneared', 'reamers', 'bewared'] ====> Elapsed time is 0.000278101309675second with library
+aneared to bewared is [('aneared', 'radioed'), ('radioed', 'bewared')] ====> Elapsed time is 0.272708461762second with class
+hilloed to bartsia is ['hilloed', 'birthed', 'bartsia'] ====> Elapsed time is 0.000192684478833second with library
+hilloed to bartsia is [('hilloed', 'lathier'), ('lathier', 'bartsia')] ====> Elapsed time is 8.4475782342second with class
+jihadis to heezing is ['jihadis', 'haziest', 'heezing'] ====> Elapsed time is 0.000106936575037second with library
+jihadis to heezing is [('jihadis', 'hayings'), ('hayings', 'heezing')] ====> Elapsed time is 0.391887784797second with class
+
+For 4000vertices:
+balista to splakes is ['balista', 'kasbahs', 'splakes'] ====> Elapsed time is 0.0003204786521second with library
+balista to splakes is [('balista', 'pilaffs'), ('pilaffs', 'splakes')] ====> Elapsed time is 6.31001211065second with class
+goodmen to nocakes is ['goodmen', 'dogears', 'nocakes'] ====> Elapsed time is 0.000256912638463second with library
+goodmen to nocakes is [('goodmen', 'songman'), ('songman', 'nocakes')] ====> Elapsed time is 1.80468150448second with class
+clacked to rebites is ['clacked', 'crestal', 'rebites'] ====> Elapsed time is 0.000172157953614second with library
+clacked to rebites is [('clacked', 'batiked'), ('batiked', 'rebites')] ====> Elapsed time is 6.16774706818second with class
+blatest to sleechy is ['blatest', 'wrestle', 'sleechy'] ====> Elapsed time is 0.000293661740045second with library
+blatest to sleechy is [('blatest', 'scantly'), ('scantly', 'sleechy')] ====> Elapsed time is 1.27191223123second with class
+dandler to garners is ['dandler', 'garners'] ====> Elapsed time is 6.02552837563e-05second with library
+dandler to garners is [('dandler', 'garners')] ====> Elapsed time is 0.156221424263second with class
+
+For 4500vertices:
+surname to stagily is ['surname', 'malmsey', 'stagily'] ====> Elapsed time is 0.000508197036083second with library
+surname to stagily is [('surname', 'irisate'), ('irisate', 'stagily')] ====> Elapsed time is 2.84779515322second with class
+laiding to nunatak is ['laiding', 'lungans', 'nunatak'] ====> Elapsed time is 0.000490981240773second with library
+laiding to nunatak is [('laiding', 'latinas'), ('latinas', 'nunatak')] ====> Elapsed time is 12.2759837668second with class
+coverer to stopped is ['coverer', 'recoats', 'stopped'] ====> Elapsed time is 0.000244000791895second with library
+coverer to stopped is [('coverer', 'revolts'), ('revolts', 'stopped')] ====> Elapsed time is 1.502912118second with class
+cloning to corvets is ['cloning', 'eosinic', 'corvets'] ====> Elapsed time is 0.000243669718941second with library
+cloning to corvets is [('cloning', 'logiest'), ('logiest', 'corvets')] ====> Elapsed time is 3.06983388744second with class
+degamis to deposer is ['degamis', 'disform', 'deposer'] ====> Elapsed time is 0.000395301147307second with library
+degamis to deposer is [('degamis', 'defaste'), ('defaste', 'deposer')] ====> Elapsed time is 0.408473548261second with class
+
+For 5000vertices:
+chamiso to asphalt is ['chamiso', 'mashuas', 'asphalt'] ====> Elapsed time is 0.000277108090695second with library
+chamiso to asphalt is [('chamiso', 'kamilas'), ('kamilas', 'asphalt')] ====> Elapsed time is 1.13938238996second with class
+injurer to ikebana is ['injurer', 'pardine', 'ikebana'] ====> Elapsed time is 0.000223143193702second with library
+injurer to ikebana is [('injurer', 'nickers'), ('nickers', 'ikebana')] ====> Elapsed time is 1.14935397728second with class
+bardism to caritas is ['bardism', 'caritas'] ====> Elapsed time is 4.63502182764e-05second with library
+bardism to caritas is [('bardism', 'caritas')] ====> Elapsed time is 0.163840738001second with class
+affrets to gnawing is ['affrets', 'easting', 'gnawing'] ====> Elapsed time is 0.000588978845098second with library
+affrets to gnawing is [('affrets', 'gannets'), ('gannets', 'gnawing')] ====> Elapsed time is 50.4632621548second with class
+gyrator to humites is ['gyrator', 'amorets', 'humites'] ====> Elapsed time is 0.000296641396972second with library
+gyrator to humites is [('gyrator', 'amorets'), ('amorets', 'humites')] ====> Elapsed time is 1.39830629681second with class

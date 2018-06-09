@@ -1,14 +1,10 @@
-# Digraph
+<h1>Getting Started</h1>
 
-Designing fundamental contents of Directed Graphs especially shortest path implementation.
+<h3>Goal</h3>
+<p>Implementation of Graph Algorithms without by using library. It is just an app which is test our talents such as algorithm design, create complex structure, embedding into object-oriented.</p>
 
-Goal given by our Asst. Prof. Dr. is to perform properties of Directed Graphs without using Library such as Networkx, and to analyse its performance, compare with library efficiency.
-
-## Design
-
+<p>Algorithms we have used</p>
 <ul>
-  <i> DiGraphGenerator applies the graph in terms of dictionary </i><br>
-  <i> 
+    <li>Connectivity</li>
+    <li>Shortest Path (Breath-First)</li>
 </ul>
-
-Coded by ForeverFreshcoders (nickname given by Lecturer:) ©
