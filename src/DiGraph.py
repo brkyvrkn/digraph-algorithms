@@ -1,18 +1,28 @@
 
-class DiGraph():
+
+class DiGraph:
+    """
+    Directed Graph with unweighted
+
+    attributes:
+    ----------------
+    vertices(list)  : type is list and store the all vertices
+    edges(list)     : type is list of tuples which stores the directionally edges (a,b) means 'a' -> 'b'
+    isolated(list)  : stores the single nodes (which has no edge)
+    size(int)       : specify the number of vertex
+    volume(int)     : specify the number of edge
+    """
 
     def __init__(self, vertices = [], edges = []):
         """
         G = (V,E)
-
-        attributes:
-        ----------------
-        vertices    : type is list and store the all vertices
-        edges       : type is list of tuples which stores the directionally edges (a,b) means 'a' -> 'b'
         """
 
         self.vertices = vertices
         self.edges = edges
+        self.isolated = self.isolated_nodes()
+        self.size = len(vertices)
+        self.volume = len(edges)
 
     def get_vertices(self):
         return self.vertices
@@ -63,6 +73,8 @@ class DiGraph():
 
         if node not in self.vertices:
             self.vertices.append(node)
+            self.isolated_nodes.append(node)
+            self.size += 1
         else:
             raise DeprecationWarning("Node has already existed.")
 
@@ -78,8 +90,18 @@ class DiGraph():
         """
 
         if (node1 in self.vertices and node2 in self.vertices):
-            e = (node1, node2)
-            self.vertices.append(e)
+            if (node1 in self.isolated):
+                self.isolated.remove(node1)
+            elif (node2 in self.isolated):
+                self.isolated.remove(node2)
+            else:
+                e1 = (node1, node2)
+                e2 = (node2, node1)
+                if (bidirectional):
+                    self.edges.extend([e1,e2])
+                else:
+                    self.edges.append(e1)
+                self.volume += 1
         else:
             raise IOError("Given vertex is not in graph.")
 
