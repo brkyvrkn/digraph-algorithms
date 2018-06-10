@@ -1,7 +1,7 @@
 
 class DiGraph():
 
-    def __init__(self, vertices, edges):
+    def __init__(self, vertices = [], edges = []):
         """
         G = (V,E)
 
@@ -11,8 +11,8 @@ class DiGraph():
         edges       : type is list of tuples which stores the directionally edges (a,b) means 'a' -> 'b'
         """
 
-        self.vertices=vertices
-        self.edges=edges
+        self.vertices = vertices
+        self.edges = edges
 
     def get_vertices(self):
         return self.vertices
@@ -20,11 +20,74 @@ class DiGraph():
     def get_edges(self):
         return self.edges
 
+    def set_vertices(self, vertices):
+        """
+        Add node list to class, which has the type of list of objects
+
+        param:
+        ----------------
+        vertices    : list of whole vertices
+
+        return:
+        ----------------
+        (void)
+        """
+
+        if (vertices is not None):
+            self.vertices = vertices
+        else:
+            raise IOError("Node list is empty")
+
+    def set_edges(self, edges):
+        """
+        Set the edge list in the class
+
+        param:
+        ----------------
+        edges   : list of tuples that contain (a,b) as a->b
+        """
+
+        if (edges is not None):
+            self.edges = edges
+        else:
+            raise IOError("Edge list is empty")
+
+    def add_node(self, node):
+        """
+        Add node if it does not exist
+
+        param:
+        ----------------
+        node    : node which will be added
+        """
+
+        if node not in self.vertices:
+            self.vertices.append(node)
+        else:
+            raise DeprecationWarning("Node has already existed.")
+
+    def add_edge(self, node1, node2, bidirectional = False):
+        """
+        Create edge between node1 and node2. If bidirectional is True then create an edge also node2 to node1
+
+        param:
+        ----------------
+        node1   : Source vertex
+        node2   : Target vertex
+        bidirectional(bool)   : Determine the direction
+        """
+
+        if (node1 in self.vertices and node2 in self.vertices):
+            e = (node1, node2)
+            self.vertices.append(e)
+        else:
+            raise IOError("Given vertex is not in graph.")
+
     def isolated_nodes(self):
         """
         Determine the single nodes in graph
         
-        params:
+        param:
         ----------------
         null
 
