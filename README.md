@@ -1,10 +1,10 @@
-<h1>Getting Started</h1>
+# Getting Started
 
-<h3>Goal</h3>
-<p>Implementation of Graph Algorithms without by using library. It is just an app which is test our talents such as algorithm design, create complex structure, embedding into object-oriented.</p>
+Goal
+----
+Implementation of Graph Algorithms without by using library. It is just an app which is test our talents such as algorithm design, create complex structure, embedding into object-oriented.
 
-<p>Algorithms we have used</p>
-<ul>
-    <li>Connectivity</li>
-    <li>Shortest Path (Breadth-First)</li>
-</ul>
+__Algorithms we have used__
+* Connectivity
+* Shortest Path (Breadth-First)
+* Neighbours with given degree

@@ -10,7 +10,7 @@ class Edge:
     weight(int) : weight or capacity of edge
     """
 
-    def __init__(self, node1, node2, weight = 0):
+    def __init__(self, node1, node2, weight = 1):
         self.__node1 = node1
         self.__node2 = node2
         self.__weight = weight
@@ -53,3 +53,6 @@ class Edge:
             self.__node2 = target
         else:
             raise ValueError("Vertex cannot be null")
+
+    def __str__(self):
+        return "Source: {0}, Target: {1}, Weight: {2}".format(self.__node1, self.__node2, self.__weight)

@@ -1,4 +1,5 @@
 
+from src.model.Edge import Edge
 
 class DiGraph:
     """
@@ -62,23 +63,32 @@ class DiGraph:
         else:
             raise IOError("Edge list is empty")
 
-    def add_node(self, node):
+    def __str__(self):
+        return "\nDiGraph has {0} vertices and {1} edges which are \nNodes:\t{2}\nEdges:\t{3}\n".format(len(self.vertices), len(self.edges), self.vertices, [str(e) for e in self.edges])
+
+    def get_vertex_from_label(self, label):
+        for v in self.vertices:
+            if (label == v.get_label()):
+                return v
+        return None
+    
+    def add_node(self, label, weight = 0):
         """
         Add node if it does not exist
 
         param:
         ----------------
         node    : node which will be added
+        w       : weight of node which is default as 0
         """
-
-        if node not in self.vertices:
-            self.vertices.append(node)
-            self.isolated_nodes.append(node)
+        if label not in self.vertices:
+            self.vertices.append(label)
+            self.isolated.append(label)
             self.size += 1
         else:
             raise DeprecationWarning("Node has already existed.")
 
-    def add_edge(self, node1, node2, bidirectional = False):
+    def add_edge(self, node1, node2, weight = 1, bidirectional = False):
         """
         Create edge between node1 and node2. If bidirectional is True then create an edge also node2 to node1
 
@@ -90,20 +100,33 @@ class DiGraph:
         """
 
         if (node1 in self.vertices and node2 in self.vertices):
-            if (node1 in self.isolated):
-                self.isolated.remove(node1)
-            elif (node2 in self.isolated):
-                self.isolated.remove(node2)
+            e1 = Edge(node1, node2, weight=weight)
+            e2 = Edge(node1, node2, weight=weight)
+            if (node1 in self.isolated):    self.isolated.remove(node1)
+            if (node2 in self.isolated):    self.isolated.remove(node2)
+            if (bidirectional):
+                self.edges.extend([e1,e2])
             else:
-                e1 = (node1, node2)
-                e2 = (node2, node1)
-                if (bidirectional):
-                    self.edges.extend([e1,e2])
-                else:
-                    self.edges.append(e1)
-                self.volume += 1
+                self.edges.append(e1)
+            self.volume += 1
         else:
             raise IOError("Given vertex is not in graph.")
+
+    def __isolated_recursive(self, nodes, iso=[]):
+        """
+        Proceed on the noeighbours
+        If a node has no neighbour then append to isolateds
+        """
+        #FIXME
+        if(len(nodes) == 0):
+            return iso
+        else:
+            active = nodes[0]
+            neigh = self.neighbours_of(active)[1]   #1st level neighbour
+            if (len(neigh) == 0):
+                iso.append(active)
+            visited = set([active] + neigh)
+            return self.__isolated_recursive(list(set(nodes) - visited),iso)
 
     def isolated_nodes(self):
         """
@@ -117,12 +140,22 @@ class DiGraph:
         ----------------
         single_vertices : which stores the single nodes as in the type of 1D list
         """
-        single_vertices=[]
-        temp_list=[]
-        for adjacents in self.edges:
-            temp_list.append(adjacents[0])
-        [single_vertices.append( k ) for k in self.vertices if (k not in temp_list)]
-        return single_vertices
+        nodes = self.vertices[:]
+        return self.__isolated_recursive(nodes, iso = [])
+
+    def adjacency_matrix(self):
+        """
+        Get the adjacency matrix as row-based
+        i.e. element in 3rd row, 4th column correspondings to adj[3][4]
+        """
+        #TODO: arrange it
+        encoding = enumerate([v for v in self.vertices])
+        dim = len(self.vertices)
+        adj = [[0] * dim] * dim
+        
+        for key, value in encoding:
+            for i in range(dim):
+                pass
 
     def to_dot_format(self,dotfile):
         """
@@ -139,7 +172,7 @@ class DiGraph:
         dot_file=open(dotfile,"w")
         dot_file.write("Digraph {\n")
         for i in self.edges:
-            dot_file.writelines(i[0] + "->" + i[1] + "\n")
+            dot_file.writelines(i.get_node1() + "->" + i.get_node2() + "\n")
         for j in self.isolated_nodes():
             dot_file.writelines(j + "\n")     #single vertices write to end
         dot_file.write("}")
@@ -149,6 +182,7 @@ class DiGraph:
         """
         Finds the shortest path by using Breath First Search(BFS) algorithm
         With recursive iterative method
+        If path duplicate then send the empty list as an argument, List stores as a reference in python!
 
         params:
         ----------------
@@ -168,10 +202,10 @@ class DiGraph:
             active_node=Queue.pop(0)
             visited.append(active_node)
             for searching_edge in self.edges:
-                if (searching_edge[0]==active_node) and (searching_edge[1] not in Queue) and (searching_edge[1] not in visited):
-                    Queue.append(searching_edge[1])     #vertex coloring
-                    if (searching_edge[1]==end_vertex):
-                        path.append((active_node,searching_edge[1]))
+                if (searching_edge.get_node1()==active_node) and (searching_edge.get_node2() not in Queue) and (searching_edge.get_node2() not in visited):
+                    Queue.append(searching_edge.get_node2())     #vertex coloring
+                    if (searching_edge.get_node2()==end_vertex):
+                        path.append((active_node,searching_edge.get_node2()))
                         return self.shortest_path(start_vertex, active_node, path)
 
     def neighbours_of(self,root,level=1):
@@ -195,9 +229,9 @@ class DiGraph:
             tree[level_counter]=[]
             for node in tree[level_counter-1]:          #active node traverses in previous neighbours
                 for edge in self.edges:
-                    if (edge[0]==node) and (edge[1] not in visited):
-                        tree[level_counter]+=[edge[1]]            #children adding to tree as multiple value by list
-                        visited.append(edge[1])
+                    if (edge.get_node1()==node) and (edge.get_node2() not in visited):
+                        tree[level_counter]+=[edge.get_node2()]            #children adding to tree as multiple value by list
+                        visited.append(edge.get_node2())
             level_counter+=1
         del tree[0]
         return tree
@@ -205,6 +239,4 @@ class DiGraph:
     def is_connected(self):
         # TODO: Take the more efficient algorithm to determine whether graph is conencted or not
         # return len(self.isolated_nodes())==0
-        if (len(self.isolated) == 0):
-            return True
-        return False
+        return (len(self.isolated) == 0)
