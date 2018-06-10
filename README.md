@@ -6,5 +6,5 @@
 <p>Algorithms we have used</p>
 <ul>
     <li>Connectivity</li>
-    <li>Shortest Path (Breath-First)</li>
+    <li>Shortest Path (Breadth-First)</li>
 </ul>

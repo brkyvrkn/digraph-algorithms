@@ -204,4 +204,7 @@ class DiGraph:
 
     def is_connected(self):
         # TODO: Take the more efficient algorithm to determine whether graph is conencted or not
-        return len(self.isolated_nodes())==0
+        # return len(self.isolated_nodes())==0
+        if (len(self.isolated) == 0):
+            return True
+        return False
